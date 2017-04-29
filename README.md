@@ -13,3 +13,19 @@ Example configuration in log4j.xml:
 </appender>
 ...
 ```
+
+For best performance, wrap the LogAnalyticsAppender inside an AsyncAppender, so logging won't hold up execution of your code:
+
+```xml
+...
+<appender name="async" class="org.apache.log4j.AsyncAppender">
+    <appender-ref ref="loganalytics"/>
+</appender>
+...
+...
+<root>
+    <level value="INFO" />
+    <appender-ref ref="async"/>
+</root>
+...
+```
