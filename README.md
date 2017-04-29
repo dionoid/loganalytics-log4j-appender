@@ -16,7 +16,7 @@ Example configuration in log4j.xml:
 
 Your **WorkspaceId** and **SharedKey** are part of your Azure Log Analytics subscription.
 
-The LogType is the name that identifies your 'Type' in Azure Log Analytics, mostly used to identify your application or source.
+The **LogType** is the name that identifies your 'Type' in Azure Log Analytics, mostly used to identify your application or source.
 *Note that the log Type will get a '_CL' suffix in Log Analytics to distinguish it as a Custom Log*
 
 For best performance, wrap the LogAnalyticsAppender inside an AsyncAppender, so logging won't hold up execution of your code:
