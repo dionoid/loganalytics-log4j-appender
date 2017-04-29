@@ -6,10 +6,10 @@ Example configuration in log4j.xml:
 ```xml
 ...
 <appender name="loganalytics" class="com.dionoid.log4j.LogAnalyticsAppender">
-    <!-- note: the log Type will get a '_CL' suffix in Log Analytics to distinguish it as a Custom Log -->
-    <param name="LogType" value="Test" />
     <param name="WorkspaceId" value="[Your WorkspaceId here!]" />
     <param name="SharedKey" value="[Your Primary or Secondary Key here!]" />
+    <param name="LogType" value="Test" />
+    <!-- note: the log Type will get a '_CL' suffix in Log Analytics to distinguish it as a Custom Log -->
 </appender>
 ...
 ```
